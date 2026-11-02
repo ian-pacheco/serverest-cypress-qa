@@ -1,0 +1,25 @@
+{
+  "name": "serverest-cypress-qa",
+  "version": "1.0.0",
+  "description": "Suíte de automação Cypress para o teste técnico Senior QA - ServeRest (E2E + API)",
+  "scripts": {
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
+    "cy:run:api": "cypress run --spec 'cypress/e2e/api/**/*.cy.js'",
+    "cy:run:ui": "cypress run --spec 'cypress/e2e/ui/**/*.cy.js'",
+    "test": "cypress run"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^9.0.0",
+    "cypress": "^13.15.0"
+  },
+  "keywords": [
+    "cypress",
+    "qa",
+    "serverest",
+    "e2e",
+    "api"
+  ],
+  "author": "QA Tester",
+  "license": "MIT"
+}
