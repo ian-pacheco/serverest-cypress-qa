@@ -1,6 +1,6 @@
 # ServeRest - Cypress QA Automation
 
-Suíte de automação de testes desenvolvida com **Cypress + JavaScript** para o teste técnico de Senior QA Tester.
+Automation Suit with **Cypress + JavaScript** testing serverest.
 
 ## App`s domain
 
@@ -15,24 +15,24 @@ Suíte de automação de testes desenvolvida com **Cypress + JavaScript** para o
 |------|----------|------|
 | `login.cy.js` | Login success | Positive |
 | `login.cy.js` | Login with invalid credentials | Negative |
-| `cadastro.cy.js` | User registration (regular + admin) → home → logout | Positive |
-| `carrinho.cy.js` | Product search (“pants”) → add to list → add to cart | Positive |
-| `carrinho.cy.js` | Product search (inexistent) → not found | Negative |
+| `register.cy.js` | User registration (regular + admin) → home → logout | Positive |
+| `shoppingCart.cy.js` | Product search (“pants”) → add to list → add to cart | Positive |
+| `shoppingCart.cy.js` | Product search (inexistent) → not found | Negative |
 
 ### API — 3 endpoints
 
 | Spec | Scenario | Type |
 |------|----------|------|
-| `login.cy.js` | Login com sucesso (retorna token) | Positive |
-| `login.cy.js` | Login com senha/email inválido | Negative |
-| `usuarios.cy.js` | Cadastro de usuário | Positive |
-| `usuarios.cy.js` | Cadastro com email duplicado | Negative |
-| `usuarios.cy.js` | Listagem de usuários | Positive |
-| `produtos.cy.js` | Listagem de produtos (público) | Positive |
-| `produtos.cy.js` | Cadastro de produto sem token | Negative |
-| `produtos.cy.js` | Cadastro de produto com token de admin | Positive |
+| `login.cy.js` | Login success (get token) | Positive |
+| `login.cy.js` | Login with invalid credentials | Negative |
+| `users.cy.js` | User sign up | Positive |
+| `users.cy.js` | Email already registered | Negative |
+| `users.cy.js` | List users | Positive |
+| `products.cy.js` | List products | Positive |
+| `products.cy.js` | Product registration tokenless | Negative |
+| `products.cy.js` | Product registration admin token | Positive |
 
-## Estrutura do projeto
+## Project initial structure
 
 ```
 cypress/
@@ -50,7 +50,7 @@ cypress.config.js
 package.json
 ```
 
-## Pré-requisitos
+## Prerequisites
 
 - Node.js 22
 - npm

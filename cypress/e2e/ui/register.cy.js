@@ -13,11 +13,11 @@ describe('E2E - Cadastro de Usuário', () => {
 
       CadastroPage.assertCadastroSucesso();
 
-      // Após cadastro com sucesso, o sistema redireciona para home (usuário já logado)
+      // After registration, the system redirects to the home page (user is already logged in)
       cy.url().should('include', '/home');
       HomePage.assertLoggedIn();
 
-      // Realiza logout
+      // Realizes logout
       HomePage.logout();
       LoginPage.assertOnLoginPage();
     });

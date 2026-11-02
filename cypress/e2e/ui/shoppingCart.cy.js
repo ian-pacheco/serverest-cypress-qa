@@ -1,7 +1,7 @@
 import LoginPage from '../../support/pages/LoginPage';
 import HomePage from '../../support/pages/HomePage';
 
-describe('E2E - Busca de Produtos', () => {
+describe('E2E - Product Search and Cart', () => {
   let user;
 
   beforeEach(() => {
@@ -38,10 +38,10 @@ describe('E2E - Busca de Produtos', () => {
     cy.get('[data-testid="pesquisar"]').clear().type(termoInexistente);
     cy.get('[data-testid="botaoPesquisar"]').click();
 
-    // Valida a mensagem de nenhum produto encontrado
+    // Expects a message indicating no products were found
     cy.contains('Nenhum produto foi encontrado').should('be.visible');
 
-    // Confirma que não há cards de produto
+    // Expects no product cards to be visible
     cy.get('.card').should('not.exist');
   });
 });

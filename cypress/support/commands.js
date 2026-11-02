@@ -41,7 +41,7 @@ Cypress.Commands.add('loginViaApi', (email, password) => {
 });
 
 //Creates an admin user via API and return user + token
-Cypress.Commands.add('', () => {
+Cypress.Commands.add('createAdminAndGetToken', () => {
   return cy.createUserViaApi({ administrador: 'true' }).then((admin) => {
     return cy.loginViaApi(admin.email, admin.password).then((loginRes) => {
       expect(loginRes.status).to.eq(200);
